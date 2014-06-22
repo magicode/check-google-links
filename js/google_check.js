@@ -32,6 +32,11 @@ $(document).ready(function() {
 			style = "new";
 			links = $("h3.r > a");
 		}
+		else if($("#mainResults").size())
+		{
+			style = "old";
+			links = $(".resultTitlePane > a.resultTitle");
+		}
 		else
 		{
 			style = "old";

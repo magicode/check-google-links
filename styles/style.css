@@ -6,8 +6,9 @@
 	width: 16px;
 	display: inline-block;
 	background-repeat: no-repeat;
-	margin-bottom: -3px;
-	margin-left: 5px;
+	margin-bottom: -3px !important;
+	margin-left: 3px !important;
+	margin-right: 3px !important;
 }
 
 .glinks-check-load{
