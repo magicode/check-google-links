@@ -37,6 +37,11 @@ $(document).ready(function() {
 			style = "old";
 			links = $(".resultTitlePane > a.resultTitle");
 		}
+		else if($("#main_results_ul").size())
+		{
+			style = "old";
+			links = $("#main_results_ul > li > a");
+		}
 		else
 		{
 			style = "old";
