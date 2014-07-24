@@ -37,16 +37,24 @@ $(document).ready(function() {
 			style = "old";
 			links = $(".resultTitlePane > a.resultTitle");
 		}
-		else if($("#main_results_ul").size())
-		{
-			style = "old";
-			links = $("#main_results_ul > li > a");
-		}
 		else
 		{
 			style = "old";
 			links = $("p > a ,.g > a.l");
 		}
+		
+		if(!links || !links.size())
+		{
+			style = "old";
+			links = $("#main_results_ul > li > a");
+		}
+		
+		if(!links || !links.size()){
+			style = "old";
+			links = $(".text_results > ul > li > a");
+		}
+		
+		
 		
 		links.each( function( index ) {
 			var a_href = $(this);
