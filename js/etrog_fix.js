@@ -5,7 +5,7 @@ var options = false;
 chrome.extension.sendRequest({method: "localStorage"}, function(response) {
 	options = response.localStorage;
 
-	/*$(document).load(*/(function() {
+	(function() {
 		
 		var url = window.location.href;
 		

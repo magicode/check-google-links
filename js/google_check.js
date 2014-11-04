@@ -10,17 +10,10 @@ function getStatus (url,callback){
 	callback = function(){
 		var fn;while('function' == typeof (fn = callbackWait[url].shift())) fn.apply(null,arguments);
 	};
-	$.ajax({
-		type: "GET",
-		url: url ,
-		success: function(message , text ,response) {
-			cache[url] = response.getResponseHeader("Rimon") == "RWC_BLOCK" ||  response.getResponseHeader("Server") == "Livigent" 
-				|| message.indexOf("blocked.aspx?CatID") != -1 ;
-			callback(cache[url]);
-		},
-		error: function(message , text ,response) {
-			callback(cache[url] = true);
-		}
+	
+	
+	chrome.extension.sendRequest({method: "isBlock", url: url }, function(response) {
+		callback(cache[url] = response.isBlock);
 	});
 }
 
