@@ -16,7 +16,8 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 					isBlock: 
 						req.getResponseHeader("Rimon")  == "RWC_BLOCK" || 
 						req.getResponseHeader("Server") == "Livigent"  || 
-						req.responseURL.indexOf("blocked.aspx?CatID") != -1
+						req.responseURL.indexOf("blocked.aspx?CatID") != -1 ||
+						req.status >= 400
 				}); 
 			}
 		};
