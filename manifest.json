@@ -28,7 +28,7 @@
 		"http://*/*" ,
 		 "https://*/*"
 	],
-	"version": "1.6",
+	"version": "1.7",
 	"options_page": "options.html",
 	"manifest_version": 2
 }
