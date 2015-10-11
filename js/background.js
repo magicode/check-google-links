@@ -15,7 +15,7 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
 						req.status >= 400) {
                     blocktype++;
                 }
-                if (req.responseText.indexOf("netfree.613m.org/b/unknown") != -1) {
+                if (req.responseText.indexOf("netfree.link/b/unknown") != -1) {
                     blocktype++;
                 }
                 sendResponse({ isBlock: blocktype });
